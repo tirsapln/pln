@@ -33,7 +33,7 @@ class M_realisasi extends CI_Model
         $this->db->select('*');
         $this->db->from('tb_realisasi');
         
-        $this->db->where('keterangan', '');
+        $this->db->where('keterangan', '-');
         $this->db->order_by('keterangan', 'ASC');
         return $this->db->get()->result();
     }
